@@ -1,18 +1,18 @@
-title: "gzip-paper-replication"
-date: 2023-09-20
+# title: "gzip-paper-replication"
+# date: 2023-09-20
 
 In this blog, I talk about how I replicated the “Low-Resource Text Classification: A Parameter-Free Classification Method with Compressors" paper with a custom dataset! 
 
 This paper talks about using a combination of a simple compressor (gzip) and a classifier (k-nearest neighbour (kNN)) to classify text without any training parameters.
-
-First I replicated the paper with their default dataset (AGNews)!
-To do that, I followed the below steps:
-	1. Create a new virtual environment for this project (I’m using conda).
-	2. Download the npc-gzip folder (GitHub repo) into <folder_name> under <folder_path>.
-	3. Run the maintext.py python file in the directory that the file is stored in. 
- 	4. Get your accuracy results!
-Make sure that all the required dependencies get downloaded from the requirements.txt file!
-
+<p>
+First I replicated the paper with their default dataset (AGNews)!<br>
+To do that, I followed the below steps:<br>
+	1. Create a new virtual environment for this project (I’m using conda).<br>
+	2. Download the npc-gzip folder (GitHub repo) into <folder_name> under <folder_path>.<br>
+	3. Run the maintext.py python file in the directory that the file is stored in.<br>
+ 	4. Get your accuracy results!<br>
+Make sure that all the required dependencies get downloaded from the requirements.txt file!<br>
+</p>
 Now that we’ve run the file with their default dataset, it’s time to use our own custom dataset!
 To do that, the first and second steps were the same as the default dataset! Then, we format our dataset to ensure that it runs with no errors.
 To do so, I did the following:
