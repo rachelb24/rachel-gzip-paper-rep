@@ -9,7 +9,10 @@
 
 # gzip paper replication with a custom dataset!
 
-Download the npc_gzip zip file to replicate the model with your custom dataset! 
+Download the npc_gzip zip file linked below to replicate the model with your custom dataset! 
+The steps I followed to do the same as elaborated below:
+https://github.com/rachelb24/rachel-gzip-paper-rep/blob/main/_posts/2023-09-20-gzip-paper-rep.md
+
 
 </header>
 
