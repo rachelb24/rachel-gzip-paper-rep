@@ -17,7 +17,7 @@ Now that we’ve run the file with their default dataset, it’s time to use our
 To do that, the first and second steps were the same as the default dataset! Then, we format our dataset to ensure that it runs with no errors.
 To do so, I did the following:
 	1. The data directory requires train and test tab-delimited text files ({label}\t{text}) as well as clean files with no tabs, newlines or multiple spaces.
-	2 My data was in the form of multiple JSON files, so I merged them and then converted them into a CSV file and then used an sklearn model to split the data 	into test and train files.( merge & test_train_split.ipynb)
+	2 My data was in the form of multiple JSON files, so I merged them and then converted them into a CSV file and then used an sklearn model to split the data 	into test and train files.( combine.py & test_train_split.ipynb)
 	3. I then used regex to clean up the files (remove all tabs, newlines, as well as multiple spaces) and bring them to a format accepted by the model!		(csv_cleanup.py).
  	4. I then ran the maintext.py file with the following syntax:
   	> python maintext.py --dataset custom –data_dir <path to your custom dataset, with train and test tab-delimited text files.> --class_num <no. of classes 	you have>
