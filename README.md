@@ -7,14 +7,14 @@
   Add your open source license, GitHub uses MIT license.
 -->
 
-# GitHub Pages
+# gzip paper replication with a custom dataset!
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+Download the npc_gzip zip file to replicate the model with your custom dataset! 
 
 </header>
 
 Link to the “Low-Resource Text Classification: A Parameter-Free Classification Method with Compressors" paper github repository:
-https://github.com/bazingagin/npc_gzip/blob/main/README.md
+https://github.com/bazingagin/npc_gzip/tree/main 
 
 
 <footer>
