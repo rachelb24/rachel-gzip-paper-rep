@@ -13,18 +13,19 @@ To do that, I followed the below steps:<br>
  	4. Get your accuracy results!<br>
 Make sure that all the required dependencies get downloaded from the requirements.txt file!<br>
 </p>
-Now that we’ve run the file with their default dataset, it’s time to use our own custom dataset!
-To do that, the first and second steps were the same as the default dataset! Then, we format our dataset to ensure that it runs with no errors.
-To do so, I did the following:
-	1. The data directory requires train and test tab-delimited text files ({label}\t{text}) as well as clean files with no tabs, newlines or multiple spaces.
-	2 My data was in the form of multiple JSON files, so I merged them and then converted them into a CSV file and then used an sklearn model to split the data 	into test and train files.( combine.py & test_train_split.ipynb)
-	3. I then used regex to clean up the files (remove all tabs, newlines, as well as multiple spaces) and bring them to a format accepted by the model!		(csv_cleanup.py).
- 	4. I then ran the maintext.py file with the following syntax:
-  	> python maintext.py --dataset custom –data_dir <path to your custom dataset, with train and test tab-delimited text files.> --class_num <no. of classes 	you have>
-   	5. Got the accuracy results!
-    	6. I also added a confusion matrix to get a better view of my results using seaborn! (confusion.ipynb) 
-     	– make these changes to your code! – location: where you got predicted labels and your labels.
-
+<p>	
+Now that we’ve run the file with their default dataset, it’s time to use our own custom dataset!<br>
+To do that, the first and second steps were the same as the default dataset! Then, we format our dataset to ensure that it runs with no errors.<br>
+To do so, I did the following:<br>
+	1. The data directory requires train and test tab-delimited text files ({label}\t{text}) as well as clean files with no tabs, newlines or multiple spaces.<br>
+	2 My data was in the form of multiple JSON files, so I merged them and then converted them into a CSV file and then used an sklearn model to split the data 	into test and train files.( combine.py & test_train_split.ipynb)<br>
+	3. I then used regex to clean up the files (remove all tabs, newlines, as well as multiple spaces) and bring them to a format accepted by the model!		(csv_cleanup.py).<br>
+ 	4. I then ran the maintext.py file with the following syntax:<br>
+  	> python maintext.py --dataset custom –data_dir <path to your custom dataset, with train and test tab-delimited text files.> --class_num <no. of classes 	you have><br>
+   	5. Got the accuracy results!<br>
+    	6. I also added a confusion matrix to get a better view of my results using seaborn! (confusion.ipynb) <br>
+     	– make these changes to your code! – location: where you got predicted labels and your labels.<br>
+</p>	
 
 You can also use different compressors and run your dataset using  '--compressor <gzip, lzma, bz2>' while running your python file.
 With my dataset, gzip worked better than bz2. lzma was quite accurate but is very heavy so it took a long time to run!
