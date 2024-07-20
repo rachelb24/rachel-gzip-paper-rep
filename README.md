@@ -1,36 +1,44 @@
-<header>
+## Replicate the Model
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+Download the `npc_gzip` zip file linked below to replicate the model with your custom dataset! Follow these steps to replicate the results:
 
-# gzip paper replication with a custom dataset!
+1. **Download the Required Files:**
+   - Download the `npc_gzip` zip file from [GitHub repository](https://github.com/bazingagin/npc_gzip/tree/main).
 
-Download the npc_gzip zip file linked below to replicate the model with your custom dataset! 
-The steps I followed to do the same as elaborated below:
-https://github.com/rachelb24/rachel-gzip-paper-rep/blob/main/_posts/2023-09-20-gzip-paper-rep.md
+2. **Replicate the Model with the Default Dataset:**
+   - Create a new virtual environment for this project (using `conda` or `venv`).
+   - Download the `npc-gzip` folder from the [GitHub repository](https://github.com/bazingagin/npc_gzip/tree/main) into `<folder_name>` under `<folder_path>`.
+   - Navigate to the directory containing `maintext.py` and run:
+     ```bash
+     python maintext.py
+     ```
+   - Review the accuracy results.
+
+   Make sure all dependencies are installed by checking the `requirements.txt` file.
+
+3. **Replicate the Model with Your Custom Dataset:**
+   - Follow the same steps as above to set up your environment and download files.
+   - Format your dataset to ensure compatibility:
+     1. Ensure your dataset is in the form of tab-delimited text files (`{label}\t{text}`) with clean data (no tabs, newlines, or multiple spaces).
+     2. If your data is in JSON format, merge and convert it into CSV files. Use `combine.py` and `test_train_split.ipynb` for this conversion.
+     3. Clean up the CSV files using regex (remove tabs, newlines, multiple spaces) with `csv_cleanup.py`.
+   - Run the model with the following command:
+     ```bash
+     python maintext.py --dataset custom --data_dir <path to your custom dataset, with train and test tab-delimited text files> --class_num <number of classes>
+     ```
+   - Review your accuracy results.
+   - Optionally, add a confusion matrix for better result visualization using seaborn. Modify your code to include the confusion matrix in `confusion.ipynb`.
+
+4. **Experiment with Different Compressors:**
+   - You can use different compressors by specifying `--compressor <gzip, lzma, bz2>` when running your Python file. Based on my experiments, `gzip` worked better than `bz2`, and `lzma`, while accurate, was slower.
+
+5. **Data Considerations:**
+   - Larger files or datasets with more data points per class generally yield better results. Try to balance your datasets as much as possible, aiming for a roughly equal number of data points per class and removing any classes with excessive data points.
+
+## Blog Post
+
+For a detailed walkthrough of replicating the "Low-Resource Text Classification: A Parameter-Free Classification Method with Compressors" paper with a custom dataset, check out my [blog post](https://github.com/rachelb24/rachel-gzip-paper-rep/blob/main/_posts/2023-09-20-gzip-paper-rep.md).
 
 
-</header>
-
-Link to the “Low-Resource Text Classification: A Parameter-Free Classification Method with Compressors" paper github repository:
-https://github.com/bazingagin/npc_gzip/tree/main 
 
 
-<footer>
-
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
-
----
-
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
-</footer>
